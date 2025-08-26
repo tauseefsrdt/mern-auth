@@ -14,7 +14,7 @@ const LogoutButton: React.FC = () => {
             navigate("/login")
         }
     }, [token, navigate])
-    return <button onClick={() => store.dispatch(logoutUser())}>Logout</button>;
+    return <button className="bg-amber-900 text-white px-6 py-1.5 cursor-pointer rounded-xl" onClick={() => store.dispatch(logoutUser())}>Logout</button>;
 };
 
 export default LogoutButton;

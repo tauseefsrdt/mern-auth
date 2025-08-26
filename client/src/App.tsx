@@ -4,6 +4,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Header from "./components/Header";
 
 
 const App: React.FC = () => {
@@ -15,7 +16,10 @@ const App: React.FC = () => {
           path="/"
           element={
             <ProtectedRoute>
-              <Home />
+              <>
+                <Header />
+                <Home />
+              </>
             </ProtectedRoute>
           }
         />

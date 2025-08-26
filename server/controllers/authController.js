@@ -1,7 +1,7 @@
 const userModel = require("../models/userModel");
 const jwt = require("jsonwebtoken");
 
-const maxAge = 3 * 24 * 60 * 60; // 3 days
+const maxAge = 5 * 60; // 15 minutes
 
 // Create JWT
 const createToken = (id) => {

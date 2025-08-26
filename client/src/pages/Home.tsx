@@ -12,9 +12,12 @@ const Home: React.FC = () => {
     }, []);
 
     return (
-        <div>
-            <h2>{message}</h2>
-            <LogoutButton />
+        <div className="w-full h-[calc(100vh-75px)] flex justify-center items-center">
+            <div className="w-full max-w-[400px] shadow-md rounded-2xl border border-gray-50 overflow-hidden p-5 flex flex-col items-center">
+                <h2 className="text-3xl text-amber-800">{message}</h2>
+                <div className="mt-6"> <LogoutButton />
+                </div>
+            </div>
         </div>
     );
 };
