@@ -4,6 +4,7 @@ import { logoutUser } from "../redux/authThunks";
 import store, { RootState } from "../redux/store";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 
 const LogoutButton: React.FC = () => {
@@ -11,6 +12,7 @@ const LogoutButton: React.FC = () => {
     const navigate = useNavigate()
     useEffect(() => {
         if (!token) {
+            toast.success("Logout successfully!");
             navigate("/login")
         }
     }, [token, navigate])
